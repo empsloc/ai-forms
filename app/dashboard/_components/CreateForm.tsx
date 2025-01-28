@@ -18,7 +18,7 @@ import { db } from "@/configs";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 const PROMPT =
-  " on the basis of description please give form in json format with form title, form subheading with form having form field, form name, placeholder , and form label, fieldType, field required in Json Format, give output as an object inside {} eg do not include field type of  number, file only include textarea, select, checkbox, text, email, tel,";
+  " on the basis of description please give form in json format with form title, form subheading with form having form field, form name, placeholder , and form label, fieldType, field required in Json Format, give output as an object inside {} eg do not include field type of  number, file only include textarea, select, checkbox, text, email, tel, dont give select options as value and label instread give options only value in double quotes eg 'batman','spiderman' but in checkbox and radio give value and label as usual";
 function filterJSONBlock(input: string) {
   // Match and extract the content inside the curly braces
   const match = input.match(/{[\s\S]*}/);
